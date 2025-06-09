@@ -419,3 +419,16 @@ html{
     background: #228B22;
     transform: translateY(-2px);
 }
+
+/* Footer */
+.footer{
+    background: #2E8B57;
+    color: white;
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.footer-content{
+    margin: 0 auto;
+    padding: 0 20px;
+}
