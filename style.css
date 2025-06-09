@@ -270,5 +270,25 @@ html{
     font-weight: bold;
 }
 
+/* Brand values */
+.values{
+    background: linear-gradient(135deg, #2E8B57, #32CD32);
+    color: white;
+    text-align: center;
+}
 
+.values-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.value-item{
+    padding: 2rem;
+}
+
+.value-item h3{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
 
