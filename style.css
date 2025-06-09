@@ -147,4 +147,33 @@ html{
 }
 
 
+/* About Section */
+.about-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text{
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.about-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('about.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    border-radius: 20px;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+
 
