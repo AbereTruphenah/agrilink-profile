@@ -175,5 +175,64 @@ html{
     text-align: center;
 }
 
+/* Features carousel */
+.carousel-container{
+    position: relative;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.carousel{
+    border-radius: 15px;
+    display: flex;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.feature-slide{
+    background: #FFF;
+    min-width: 100%;
+    padding: 3rem;
+    text-align: center;
+    transition: transform 0.5s ease;
+}
+
+.feature-slide.active{
+    transform: translateX(0);
+}
+
+.feature-icon{
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+    font-size: 2rem;
+    color: #FFF;
+    background: linear-gradient(45deg, #2E8B57, #32CD32);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-nav{
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;   
+}
+
+.carousel-dot{
+    width: 12px;
+    height: 12px;
+    background: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-dot.active{
+    background: #2E8B57;
+    transform: scale(1.2);
+}
 
 
