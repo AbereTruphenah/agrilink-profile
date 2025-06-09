@@ -235,4 +235,40 @@ html{
     transform: scale(1.2);
 }
 
+/* Testimonia;s */
+.testimonials{
+    background: #f8f9fa;
+}
+        
+.testimonials-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial-card{
+    background: #FFF;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover{
+    transform: translateY(-5px);
+}
+
+
+.testimonial-text{
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.testimonial-author{
+    color: #2E8B57;
+    font-weight: bold;
+}
+
+
 
