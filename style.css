@@ -338,6 +338,7 @@ html{
   max-width: 700px;
   margin: auto;
 }
+
 #chatlog {
   height: 250px;
   overflow-y: auto;
@@ -345,10 +346,12 @@ html{
   padding: 10px;
   margin-bottom: 10px;
 }
+
 #userInput {
   width: calc(100% - 90px);
   padding: 10px;
 }
+
 .chatbox button {
   padding: 1rem 1.5rem;
   margin-left: 0.5rem;
@@ -357,4 +360,62 @@ html{
   border: none;
   cursor: pointer;
   border-radius: 25px;
+}
+
+/* Contact Form */
+.contact{
+    background: #f8f9fa;
+}
+
+.contact-form{
+   max-width: 600px;
+   background: #FFF;
+   padding: 3rem;
+   margin: 0 auto;
+   border-radius: 15px;
+   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.form-element{
+    margin-bottom: 1.5rem;
+}
+
+.form-element label{
+    color: #2E8B57;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-element input,
+.form-element textarea{
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.75rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.form-element input:focus,
+.form-element textarea:focus{
+    border-color: #2E8B57;
+    outline: none;
+}
+
+.submit-button{
+    background: #2E8B57;
+    padding: 1rem 2rem;
+    color: white;
+    font-size: 1.1rem;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-button:hover{
+    background: #228B22;
+    transform: translateY(-2px);
 }
