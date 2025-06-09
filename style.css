@@ -14,3 +14,53 @@ body{
 html{
     scroll-behavior: smooth; /* Smooth scrolling */
 }
+
+/* Navigation */
+.nav{
+    position: fixed;
+    width: 100%;
+    padding: 1rem 0;
+    top: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.nav.scrolled{
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.nav-container{
+    margin: 0 auto;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-size: 2rem;
+    color: #2E8B57;
+    font-weight: bold;
+}
+
+.nav-links{
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-links a:hover{
+    color: #2E8B57;
+    padding: 2px;
+}
+
