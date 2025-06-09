@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgriLink - Connecting Farmers to Markets</title>
+    <link rel="stylesheet" href="style.css">
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     integrity="sha512-..."
     crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+    referrerpolicy="no-referrer">
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Header - Navigation -->
      <header class="nav" id="navbar">
         <div class="nav-container">
             <div class="logo">🌱 AgriLink</div>
@@ -28,8 +28,8 @@
         </div>
      </header>
 
-    <!-- Hero Section -->
      <main>
+        <!-- Hero Section -->
         <section class="hero" id="home">
             <div class="hero-content">
                 <h1>🌱 AgriLink</h1>
@@ -39,163 +39,163 @@
         </section>
 
         <!-- About Section -->
-    <section class="section" id="about">
-        <h2>About Us</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p><strong>Our Story:</strong> Founded in 2025 by Truphenah Abere, a daughter of small-scale farmers, who witnessed firsthand how smallholder farmers in Kenya lose up to 40% of their profits to intermediaries.</p>
-                <p><strong>The Problem:</strong> Approximately 40% to 80% of Kenya's population depend on agriculture, yet farmers struggle with poor market access, price volatility, and exploitation by middlemen who control distribution channels.</p>
-                <p><strong>Our Solution:</strong> AgriLink is a digital platform that connects farmers directly to retailers, restaurants, and consumers, providing real-time market prices, logistics support, and mobile payment solutions.</p>
-                <p><strong>Impact:</strong> We've helped over 15,000 farmers increase their income by an average of 35% while providing fresh, traceable produce to urban markets across Kenya and beyond.</p>
-            </div>
-            <div class="about-image">
-                <div>
-                    🚜<br>
-                    <strong>Empowering Farmers</strong><br>
-                    Building Sustainable Agriculture
+         <section class="section" id="about">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p><strong>Our Story:</strong> Founded in 2025 by Truphenah Abere, a daughter of small-scale farmers, who witnessed firsthand how smallholder farmers in Kenya lose up to 40% of their profits to intermediaries.</p>
+                    <p><strong>The Problem:</strong> Approximately 40% to 80% of Kenya's population depend on agriculture, yet farmers struggle with poor market access, price volatility, and exploitation by middlemen who control distribution channels.</p>
+                    <p><strong>Our Solution:</strong> AgriLink is a digital platform that connects farmers directly to retailers, restaurants, and consumers, providing real-time market prices, logistics support, and mobile payment solutions.</p>
+                    <p><strong>Impact:</strong> We've helped over 15,000 farmers increase their income by an average of 35% while providing fresh, traceable produce to urban markets across Kenya and beyond.</p>
+                </div>
+                <div class="about-image">
+                    <div>
+                        🚜<br>
+                        <strong>Empowering Farmers</strong><br>
+                        Building Sustainable Agriculture
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Product Features -->
-    <section class="section" id="features">
-        <h2>Our Platform Features</h2>
-        <div class="carousel-container">
-            <div class="carousel">
-                <div class="feature-slide active">
-                    <div class="feature-icon">📱</div>
-                    <h3>Mobile-First Platform</h3>
-                    <p>Accessible via SMS and basic smartphones, designed for areas with limited internet connectivity. Farmers can list products, check prices, and receive orders through simple text commands.</p>
+        </section>
+        
+        <!-- Product Features -->
+         <section class="section" id="features">
+            <h2>Our Platform Features</h2>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="feature-slide active">
+                        <div class="feature-icon">📱</div>
+                        <h3>Mobile-First Platform</h3>
+                        <p>Accessible via SMS and basic smartphones, designed for areas with limited internet connectivity. Farmers can list products, check prices, and receive orders through simple text commands.</p>
+                    </div>
+                    <div class="feature-slide">
+                        <div class="feature-icon">💰</div>
+                        <h3>Real-Time Pricing</h3>
+                        <p>Dynamic pricing based on supply and demand, market conditions, and seasonal factors. Farmers get fair, transparent pricing with no hidden fees or middleman markups.</p>
+                    </div>
+                    <div class="feature-slide">
+                        <div class="feature-icon">💳</div>
+                        <h3>Mobile Payments</h3>
+                        <p>Integrated mobile money solutions allowing instant, secure payments directly to farmers' phones, eliminating payment delays and reducing transaction costs.</p>
+                    </div>
+                    <div class="feature-slide">
+                        <div class="feature-icon">🚚</div>
+                        <h3>Logistics Network</h3>
+                        <p>Coordinated pickup and delivery system using local transport networks, reducing post-harvest losses and ensuring fresh produce reaches markets quickly.</p>
+                    </div>
                 </div>
-                <div class="feature-slide">
-                    <div class="feature-icon">💰</div>
-                    <h3>Real-Time Pricing</h3>
-                    <p>Dynamic pricing based on supply and demand, market conditions, and seasonal factors. Farmers get fair, transparent pricing with no hidden fees or middleman markups.</p>
-                </div>
-                <div class="feature-slide">
-                    <div class="feature-icon">💳</div>
-                    <h3>Mobile Payments</h3>
-                    <p>Integrated mobile money solutions allowing instant, secure payments directly to farmers' phones, eliminating payment delays and reducing transaction costs.</p>
-                </div>
-                <div class="feature-slide">
-                    <div class="feature-icon">🚚</div>
-                    <h3>Logistics Network</h3>
-                    <p>Coordinated pickup and delivery system using local transport networks, reducing post-harvest losses and ensuring fresh produce reaches markets quickly.</p>
+                <div class="carousel-nav">
+                    <span class="carousel-dot active" onclick="currentSlide(1)"></span>
+                    <span class="carousel-dot" onclick="currentSlide(2)"></span>
+                    <span class="carousel-dot" onclick="currentSlide(3)"></span>
+                    <span class="carousel-dot" onclick="currentSlide(4)"></span>
                 </div>
             </div>
-            <div class="carousel-nav">
-                <span class="carousel-dot active" onclick="currentSlide(1)"></span>
-                <span class="carousel-dot" onclick="currentSlide(2)"></span>
-                <span class="carousel-dot" onclick="currentSlide(3)"></span>
-                <span class="carousel-dot" onclick="currentSlide(4)"></span>
+        </section>
+        
+        <!-- Testimonials -->
+         <section class="section testimonials" id="testimonials">
+            <h2>What Our Users Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">"We finally get fresh produce directly from growers - faster and cheaper. As a restaurant owner, AgriLink gives me direct access to fresh, quality produce while supporting local farmers. It's a win-win for everyone."</div>
+                    <div class="testimonial-author">- Stella Wanja, Restaurant Owner, Nakuru</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">"AgriLink helped me triple my income in one season! Before AgriLink, I was selling my tomatoes to middlemen for 20 shillings per kg. Now I sell directly to restaurants for 35 shillings. My family's life has completely changed."</div>
+                    <div class="testimonial-author">- Tom Mobegi, Tomato Farmer, Nyamira</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">"The mobile platform is so simple to use. I can check market prices and receive orders without leaving my farm. AgriLink has made farming profitable again."</div>
+                    <div class="testimonial-author">- Sandra Chebet, Onion Farmer, Bomet</div>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="section testimonials" id="testimonials">
-        <h2>What Our Users Say</h2>
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <div class="testimonial-text">"We finally get fresh produce directly from growers - faster and cheaper. As a restaurant owner, AgriLink gives me direct access to fresh, quality produce while supporting local farmers. It's a win-win for everyone."</div>
-                <div class="testimonial-author">- Stella Wanja, Restaurant Owner, Nakuru</div>
+        </section>
+        
+        <!-- Core Values Section -->
+         <section class="section values">
+            <h2>Our Core Values</h2>
+            <div class="values-grid">
+                <div class="value-item">
+                    <h3>🤝 FAIRNESS</h3>
+                    <p>Ensuring equitable pricing and transparent transactions that benefit all stakeholders in the agricultural value chain.</p>
+                </div>
+                <div class="value-item">
+                    <h3>💡 INNOVATION</h3>
+                    <p>Leveraging technology to solve age-old agricultural challenges and create new opportunities for growth.</p>
+                </div>
+                <div class="value-item">
+                    <h3>🌍 SUSTAINABILITY</h3>
+                    <p>Promoting environmentally responsible farming practices while building economically viable rural communities.</p>
+                </div>
             </div>
-            <div class="testimonial-card">
-                <div class="testimonial-text">"AgriLink helped me triple my income in one season! Before AgriLink, I was selling my tomatoes to middlemen for 20 shillings per kg. Now I sell directly to restaurants for 35 shillings. My family's life has completely changed."</div>
-                <div class="testimonial-author">- Tom Mobegi, Tomato Farmer, Nyamira</div>
+        </section>
+        
+        <!-- Team Section -->
+         <section class="section" id="team">
+            <h2>Meet Our Team</h2>
+            <div class="team-grid">
+                <div class="member">
+                    <div class="member-photo">TA</div>
+                    <h3>Truphenah Abere</h3>
+                    <p><strong>CEO & Founder</strong></p>
+                    <p>Software Engineer</p>
+                </div>
+                <div class="member">
+                    <div class="member-photo">FM</div>
+                    <h3>Felix Maina</h3>
+                    <p><strong>CTO</strong></p>
+                    <p>Agricultural Economist & AI Researcher</p>
+                </div>
+                <div class="member">
+                    <div class="member-photo">GR</div>
+                    <h3>Gilbert Rono</h3>
+                    <p><strong>Head of Operations</strong></p>
+                    <p>Supply Chain Specialist</p>
+                </div>
+                <div class="member">
+                    <div class="member-photo">SA</div>
+                    <h3>Stacy Apondi</h3>
+                    <p><strong>Head of Partnerships</strong></p>
+                    <p>Community Engagement Expert</p>
+                </div>
             </div>
-            <div class="testimonial-card">
-                <div class="testimonial-text">"The mobile platform is so simple to use. I can check market prices and receive orders without leaving my farm. AgriLink has made farming profitable again."</div>
-                <div class="testimonial-author">- Sandra Chebet, Onion Farmer, Bomet</div>
+        </section>
+        
+        <!-- Chatbot -->
+         <section class="section" id="chatbot">
+            <h2>Ask AgriBot</h2>
+            <div class="chatbox">
+                <div id="chatlog"></div>
+                <input type="text" id="userInput" placeholder="Ask about AgriLink...">
+                <button onclick="sendMessage()">Send</button>
             </div>
-        </div>
-    </section>
-
-    <!-- Core Values Section -->
-    <section class="section values">
-        <h2>Our Core Values</h2>
-        <div class="values-grid">
-            <div class="value-item">
-                <h3>🤝 FAIRNESS</h3>
-                <p>Ensuring equitable pricing and transparent transactions that benefit all stakeholders in the agricultural value chain.</p>
-            </div>
-            <div class="value-item">
-                <h3>💡 INNOVATION</h3>
-                <p>Leveraging technology to solve age-old agricultural challenges and create new opportunities for growth.</p>
-            </div>
-            <div class="value-item">
-                <h3>🌍 SUSTAINABILITY</h3>
-                <p>Promoting environmentally responsible farming practices while building economically viable rural communities.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team Section -->
-    <section class="section" id="team">
-        <h2>Meet Our Team</h2>
-        <div class="team-grid">
-            <div class="member">
-                <div class="member-photo">TA</div>
-                <h3>Truphenah Abere</h3>
-                <p><strong>CEO & Founder</strong></p>
-                <p>Software Engineer</p>
-            </div>
-            <div class="member">
-                <div class="member-photo">FM</div>
-                <h3>Felix Maina</h3>
-                <p><strong>CTO</strong></p>
-                <p>Agricultural Economist & AI Researcher</p>
-            </div>
-            <div class="member">
-                <div class="member-photo">GR</div>
-                <h3>Gilbert Rono</h3>
-                <p><strong>Head of Operations</strong></p>
-                <p>Supply Chain Specialist</p>
-            </div>
-            <div class="member">
-                <div class="member-photo">SA</div>
-                <h3>Stacy Apondi</h3>
-                <p><strong>Head of Partnerships</strong></p>
-                <p>Community Engagement Expert</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Chatbot -->
-     <section class="section" id="chatbot">
-        <h2>Ask AgriBot</h2>
-        <div class="chatbox">
-            <div id="chatlog"></div>
-            <input type="text" id="userInput" placeholder="Ask about AgriLink...">
-            <button onclick="sendMessage()">Send</button>
-        </div>
-     </section>
-
-     <!-- Contact Section -->
-    <section class="section contact" id="contact">
-        <h2>Get In Touch</h2>
-        <form class="contact-form" id="contactForm">
-            <div class="form-element">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-element">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-element">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="submit-buttonn">Send Message</button>
-        </form>
-    </section>
+         </section>
+         
+         <!-- Contact Section -->
+          <section class="section contact" id="contact">
+            <h2>Get In Touch</h2>
+            <form class="contact-form" id="contactForm">
+                <div class="form-element">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-element">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-element">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </section>
 
      </main>
-
+     
      <!-- Footer -->
-    <footer class="footer">
+      <footer class="footer">
         <div class="footer-content">
             <h3>🌱 AgriLink</h3>
             <p>Connecting Farmers. Transforming Agriculture. Building Futures.</p>
