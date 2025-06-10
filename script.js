@@ -157,3 +157,28 @@ function setSampleQuestion(text) {
   userInput.value = text;
   userInput.focus();
 }
+
+// Contact form submission
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+            
+  const submitBtn = this.querySelector('.submit-button');
+  const name = this.querySelector("input[type='text']").value;
+  const originalText = submitBtn.textContent;
+            
+  submitBtn.textContent = 'Sending...';
+  submitBtn.disabled = true;
+            
+  setTimeout(() => {
+    submitBtn.textContent = 'Message Sent!';
+    alert("Thank you for contacting us, " + name + "! We'll get back to you soon.");
+    submitBtn.style.background = '#28a745';
+                
+    setTimeout(() => {
+      submitBtn.textContent = originalText;
+      submitBtn.style.background = '#2E8B57';
+      submitBtn.disabled = false;
+      this.reset();
+    }, 2000);
+  }, 1000);
+});
