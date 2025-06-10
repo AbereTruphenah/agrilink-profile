@@ -1,4 +1,4 @@
-# 🌾 AgriLink – Connecting Farmers Directly to Markets, Eliminating Middlemen, Maximizing Profits
+# 🌱 AgriLink – Connecting Farmers Directly to Markets, Eliminating Middlemen, Maximizing Profits
 
 AgriLink is a startup dedicated to transforming agriculture in Kenys. We solve the real-world problem of produce waste and farmer underpayment by directly linking small-scale farmers with buyers using smart mobile technology. Our mission is to empower farmers with transparent market access, real-time pricing data, and logistical tools that boost income and reduce waste.
 
