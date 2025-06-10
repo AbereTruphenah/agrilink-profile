@@ -69,6 +69,275 @@ html {
     color: #228B22;
 }
 
+.theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.theme-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #bbb;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #4CAF50;
+}
+
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
+
+/* Dark Mode Overrides */
+.dark-mode body {
+    background-color: #121212;
+    color: #ddd;
+}
+
+.dark-mode .nav {
+    background: rgba(18, 18, 18, 0.95);
+    box-shadow: 0 2px 20px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .logo {
+    color: #76c893; /* lighter green */
+}
+
+.dark-mode .nav-links a {
+    color: #ccc;
+}
+
+.dark-mode .nav-links a:hover {
+    color: #76c893;
+}
+
+.dark-mode .nav-links a:active {
+    color: #4caf50;
+}
+
+.dark-mode .section h2 {
+    color: #76c893;
+}
+
+.dark-mode .hero {
+    background: linear-gradient(135deg, #204529 0%, #1a3a1a 50%, #27632a 100%);
+    color: #eee;
+}
+
+.dark-mode .cta-button {
+    background: #4caf50;
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(76, 175, 80, 0.5);
+}
+
+.dark-mode .cta-button:hover {
+    box-shadow: 0 15px 40px rgba(76, 175, 80, 0.6);
+    color: #b2fab4;
+}
+
+.dark-mode .about-image {
+    filter: brightness(0.7);
+}
+
+.dark-mode .feature-slide {
+    background: #222;
+    color: #ddd;
+}
+
+.dark-mode .feature-icon {
+    background: linear-gradient(45deg, #4caf50, #81c784);
+    color: #fff;
+}
+
+.dark-mode .carousel-dot {
+    background: #555;
+}
+
+.dark-mode .carousel-dot.active {
+    background: #76c893;
+}
+
+.dark-mode .testimonials {
+    background: #222;
+}
+
+.dark-mode .testimonial-card {
+    background: #333;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+}
+
+.dark-mode .testimonial-author {
+    color: #76c893;
+}
+
+.dark-mode .values {
+    background: linear-gradient(135deg, #204529, #27632a);
+    color: #b2fab4;
+}
+
+.dark-mode .audience-toggle {
+    background: #222;
+}
+
+.dark-mode .toggle-switch {
+    background: #444;
+}
+
+.dark-mode .toggle-slider {
+    background: #76c893;
+    box-shadow: 0 2px 10px rgba(118, 200, 147, 0.7);
+}
+
+.dark-mode .toggle-label {
+    color: #aaa;
+}
+
+.dark-mode .toggle-switch .toggle-label.active {
+    color: #e0ffe0;
+}
+
+.dark-mode .audience-card {
+    background: #333;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+    color: #ddd;
+}
+
+.dark-mode .audience-card h3 {
+    color: #76c893;
+}
+
+.dark-mode .member {
+    background: #333;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+    color: #ddd;
+}
+
+.dark-mode .faq {
+    background-color: #222;
+    color: #ddd;
+}
+
+.dark-mode .accordion .faq-item {
+    border-color: #444;
+}
+
+.dark-mode .accordion-toggle {
+    background: #4caf50;
+    color: #222;
+}
+
+.dark-mode .accordion-toggle:hover {
+    background-color: #76c893;
+    color: #222;
+}
+
+.dark-mode .accordion-content {
+    background: #333;
+    color: #ddd;
+}
+
+.dark-mode #chatbot,
+.dark-mode .chatbox {
+    background: #333;
+    color: #ddd;
+    border-color: #555;
+}
+
+.dark-mode #chatlog {
+    border-color: #555;
+    background: #222;
+    color: #ddd;
+}
+
+.dark-mode .chatbox button {
+    background: #4caf50;
+    color: #222;
+}
+
+.dark-mode .chatbox button:hover {
+    background: #76c893;
+    color: #222;
+}
+
+.dark-mode .contact {
+    background: #222;
+    color: #ddd;
+}
+
+.dark-mode .contact-form {
+    background: #333;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.dark-mode .form-element label {
+    color: #76c893;
+}
+
+.dark-mode .form-element input,
+.dark-mode .form-element textarea {
+    background: #444;
+    border-color: #666;
+    color: #ddd;
+}
+
+.dark-mode .form-element input:focus,
+.dark-mode .form-element textarea:focus {
+    border-color: #76c893;
+}
+
+.dark-mode .submit-button {
+    background: #4caf50;
+    color: #222;
+}
+
+.dark-mode .submit-button:hover {
+    background: #76c893;
+    color: #222;
+}
+
+.dark-mode .footer {
+    background: #204529;
+    color: #b2fab4;
+}
+
+.dark-mode .footer-content i {
+    color: #7cfc00;
+}
+
+.dark-mode .footer-content a {
+    color: #b2fab4;
+}
+
+
 /* Section styling */
 .section {
     margin: 0 auto;
@@ -443,6 +712,57 @@ html {
     justify-content: center;
 }
 
+/* FAQ Section */
+.faq {
+    background-color: #fff;
+    padding: 3rem 2rem;
+}
+
+.accordion .faq-item {
+    margin-bottom: 1rem;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.accordion-toggle {
+    width: 100%;
+    padding: 1rem;
+    background: #228B22;
+    color: #333;
+    font-weight: bold;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+.accordion-toggle:hover {
+    background-color: #2E8B57;
+    color: #fff;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background: #fff;
+  padding: 0 1rem;
+}
+
+.accordion-content p {
+    margin: 0;
+    padding: 0.5rem 0;
+}
+
+.faq-icon {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
 /* Chatbot */
 #chatbot {
     background: #FFF;
@@ -559,3 +879,5 @@ html {
     text-decoration: none;
     color: #FFF;
 }
+
+
