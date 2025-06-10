@@ -9,6 +9,11 @@ window.addEventListener('scroll', function(){
     }
 })
 
+// Mobile Menu Toggle
+document.querySelector('.menu-toggle').addEventListener('click', () => {
+  document.querySelector('.nav-links').classList.toggle('active');
+});
+
 // Dark and Light mode
 const themeSwitch = document.getElementById("theme-switch");
 const body = document.body;
