@@ -47,6 +47,15 @@ html {
     font-weight: bold;
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color:#000;
+  cursor: pointer;
+}
+
 .nav-links {
     display: flex;
     gap: 2rem;
@@ -902,6 +911,27 @@ input:checked + .slider::before {
 
     .nav-links {
         display: none;
+        flex-direction: column;
+        background: #2E8B57;
+        position: absolute;
+        top: 60px;
+        right: 1rem;
+        box-shadow: 0 2px 8px #ccc;
+        padding: 1rem;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .menu-toggle {
+        display: block;
+        background: #008000;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        border: none;
     }
 
     .chatbox {
