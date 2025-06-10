@@ -259,9 +259,13 @@
          <section class="section" id="chatbot">
             <h2>Ask AgriBot</h2>
             <div class="chatbox">
-                <div id="chatlog"></div>
+                <div class="chat-log" id="chatlog">
+                    <div class="message bot-message">
+                        Hi! I'm the AgriLink assistant. Ask me about our platform, how we help farmers, pricing, or anything else about AgriLink!
+                    </div>
+                </div>
                 <input type="text" id="userInput" placeholder="Ask about AgriLink...">
-                <button onclick="sendMessage()">Send</button>
+                <button id="sendBtn">Send</button>
             </div>
          </section>
          

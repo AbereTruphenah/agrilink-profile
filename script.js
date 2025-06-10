@@ -104,59 +104,93 @@ toggles.forEach(toggle => {
 });
 
 // AI Chatbot using Puter.js
-const chatlog = document.getElementById('chatlog');
-const userInput = document.getElementById('userInput');
+const chatlog = document.getElementById("chatlog");
+const userInput = document.getElementById("userInput");
+const sendBtn = document.getElementById("sendBtn");
 
-const systemPrompt = `
-You are AgriBot, the virtual assistant for AgriLink — AgriLink is a digital platform that connects farmers directly to markets, eliminating middlemen and increasing farmer profits by up to 35%.
+const chatbotResponses = `
+You are AgriBot, the helpful assistant for AgriLink — a startup founded by Truphenah Abere in 2025.
+AgriLink connects small-scale farmers in East Africa directly to buyers, eliminating middlemen and increasing farmer profits by up to 35%.
+The platform provides mobile access, logistics scheduling, and fair market prices.
 
-**Origin Story**: Founded in 2025 by Truphenah Abere, a daughter of small-scale farmers, AgriLink aims to solve inefficiencies in agricultural markets by directly connecting farmers and buyers.
+hello: Hello! Welcome to AgriLink. How can I help you today?
+hi: Hi there! I'm here to answer questions about AgriLink.
+name: AgriLink
+Mission: To empower farmers through market data, logistics, and equitable access.
+Vision: A future where every farmer thrives through digital tools and direct access to markets.
+Origin Story: Founded in 2025 by Truphenah Abere, a daughter of small-scale farmers, AgriLink aims to solve inefficiencies in agricultural markets by directly connecting farmers and buyers.
+Services: Produce marketplace, logistics coordination, mobile payment support.
+what is agrilink: AgriLink is a digital platform that connects farmers directly to markets, eliminating middlemen and increasing farmer profits by up to 35%.
 
-**Mission**: To empower farmers through accessible market data, logistics tools, and fair trade connections.
+pricing: Our platform charges a small 3% transaction fee, much lower than traditional middlemen who take 30-40%. Farmers keep 97% of their sale price.
+farmers: We currently serve over 15,000 farmers across Kenya, helping them access better markets and fair prices.
+countries: We currently operate in Central and Western Kenya, with plans to expand across East Africa
+impact: We've helped farmers increase their income by 35% on average, reduced post-harvest losses by 25%, and connected rural farmers to urban markets.
+founder:AgriLink was founded by by Truphenah Abere, a daughter of small-scale farmers passionate about empowering smallholder farmers.
 
-**Services**:
-1. Coordinated pickup and delivery system.
-2. Direct buyer-farmer matching
-3. Instant Payments
-4. Produce delivery and logistics planning
-5. Free Pickup Service
-6. Fresh Direct from Farm
-7. Consistent supply with our network of verified farmers. 
+Team: Truphenah Abere (Founder & CEO), Felix Maina (CTO), Gilbert Rono (Head of Operations), Stacy Apondi (Head of Partnerships)
+how does it work: Farmers list their produce on our mobile platform, buyers place orders directly, and our logistics network handles pickup and delivery. Payments are processed instantly via mobile money.
+investment: We're always open to partnerships and investment opportunities. Please contact us through our contact form or email.
 
-**Vision**: A future where every farmer has equal access to profitable markets and agriculture is fully digitized and equitable.
-
-**Team**: Truphenah Abere (Founder & CEO), Felix Maina (CTO), Gilbert Rono (Head of Operations), Stacy Apondi (Head of Partnerships)
-
-You should answer questions about AgriLink’s story, services, founder, how to get involved, and future goals in a friendly, helpful tone.
+Contact: hello@agrilink.co.ke | +254-700-123-456 | https://www.linkedin.com/in/agrilink
 `;
 
-const puterChat = puter.ai.chat({
-  systemPrompt: systemPrompt,
-});
 
-async function sendMessage() {
-  const input = userInput.value.trim();
-  if (!input) return;
+function appendQAPair(userText, botText) {
+  const qaDiv = document.createElement("div");
+  qaDiv.className = "qa-pair";
 
-  appendMessage('You', input);
-  userInput.value = '';
+  const userLine = document.createElement("div");
+  userLine.className = "message user-message";
+  userLine.textContent = userText;
 
-  const reply = await puterChat.send(input);
-  appendMessage('AgriBot', reply.text);
-}
+  const botLine = document.createElement("div");
+  botLine.className = "message bot-message";
+  botLine.textContent = botText;
 
-function appendMessage(sender, message) {
-  const div = document.createElement('div');
-  div.classList.add('chat-message');
-  div.innerHTML = `<strong>${sender}:</strong> ${message}`;
-  chatlog.appendChild(div);
+  qaDiv.appendChild(userLine);
+  qaDiv.appendChild(botLine);
+  chatlog.appendChild(qaDiv);
   chatlog.scrollTop = chatlog.scrollHeight;
 }
 
-function setSampleQuestion(text) {
-  userInput.value = text;
-  userInput.focus();
+function appendMessage(sender, message) {
+  const messageDiv = document.createElement("div");
+  messageDiv.className = `message ${sender}-message`;
+  messageDiv.textContent = message;
+  chatlog.appendChild(messageDiv);
+  chatlog.scrollTop = chatlog.scrollHeight;
 }
+
+async function sendMessage() {
+  const userText = userInput.value.trim();
+  if (!userText) return;
+
+  userInput.value = "";
+
+  appendQAPair(userText, "Thinking...");
+
+  try {
+    const prompt = `${chatbotResponses}\n\nUser: ${userText}\nAgriBot:`;
+    const response = await puter.ai.chat(prompt);
+
+    
+    chatlog.lastChild.remove();
+    appendQAPair(userText, response);
+    
+  }
+  catch (error) {
+    console.error("Puter AI error:", error);
+    chatlog.lastChild.remove(); // remove placeholder
+    appendQAPair(userText, "Sorry, something went wrong connecting to our AI.");
+  }
+}
+
+sendBtn.addEventListener("click", sendMessage);
+userInput.addEventListener("keypress", function (e) {
+  if (e.key === "Enter") sendMessage();
+});
+
 
 // Contact form submission
 document.getElementById('contactForm').addEventListener('submit', function(e) {
